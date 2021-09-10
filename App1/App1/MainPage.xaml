@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.MainPage">
+
+    <ContentPage.Resources>
+        <Style TargetType="Label">
+            <Setter Property="BackgroundColor" Value="Blue" />
+            <Setter Property="HorizontalTextAlignment" Value="Start" />
+            <Setter Property="VerticalTextAlignment" Value="Center" />
+            <Setter Property="FontSize" Value="36" />
+            <Setter Property="Padding" Value="10, 0, 0, 0" />
+        </Style>
+        <Style TargetType="Label" BasedOn="{StaticResource Xamarin.Forms.Label}" x:Key="greyLabel">
+            <Setter Property="BackgroundColor" Value="#808080" />
+        </Style>
+        <Style TargetType="Entry">
+            <Setter Property="FontSize" Value="24" />
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="FontSize" Value="24" />
+            <Setter Property="Margin" Value="75, 20" />
+        </Style>
+    </ContentPage.Resources>
+
+    <Grid x:Name="grid">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="2*" />
+        </Grid.ColumnDefinitions>
+
+
+        <Label Text="Bill:" />
+        <Entry x:Name="bill" Placeholder="Enter Bill" Grid.Column="1"/>
+
+        <Label Text="Tip:" Grid.Row="1"/>
+        <Entry x:Name="tip" Placeholder="Enter Tip" Grid.Row="1" Grid.Column="1"/>
+
+        <Label Text="No of Guest" Grid.Row="2"/>
+        <Entry x:Name="guests" Placeholder="Number of Guests" Grid.Row="2" Grid.Column="1"/>
+
+        <Label Text="Total Bill:" Grid.Row="3"/>
+        <Label x:Name="totalBill" Style="{StaticResource greyLabel}" Grid.Row="3" Grid.Column="1"/>
+
+        <Label Text="Total Tip:" Grid.Row="4"/>
+        <Label x:Name="totalTip" Style="{StaticResource greyLabel}" Grid.Row="4" Grid.Column="1"/>
+
+        <Button 
+            Text="CALCULATE BILL" 
+            Clicked="CalculateBill" 
+            BackgroundColor="DarkGreen"
+            Grid.Row="5"
+            Grid.ColumnSpan="2"
+            />
+
+        <Button 
+            Text="CLEAR" 
+            Clicked="Clear" 
+            BackgroundColor="Magenta"
+            Grid.Row="6"
+            Grid.ColumnSpan="2"
+            />
+    </Grid>
+
+</ContentPage>
