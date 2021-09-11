@@ -13,7 +13,7 @@ namespace App1
         {
             get
             {
-                return Bill + Tip;
+                return Bill + TotalTip;
             }
         }
 
@@ -21,7 +21,7 @@ namespace App1
         {
             get
             {
-                return Total * (1 + Guests / 100);
+                return Tip * (1 + Guests / 100m);
             }
         }
 
