@@ -41,13 +41,13 @@
 
         <Image Source="maple" Grid.ColumnSpan="2" />
     
-        <Label Text="Bill:" Grid.Row="1" />
+        <Button Clicked="BillButtonClicked" Text="Bill:" Grid.Row="1" />
         <Entry x:Name="bill" Placeholder="Enter Bill" Grid.Row="1" Grid.Column="1"/>
 
-        <Label Text="Tip:" Grid.Row="2"/>
+        <Button Clicked="TipAmountButtonClicked" Text="Tip:" Grid.Row="2"/>
         <Entry x:Name="tip" Placeholder="Enter Tip" Grid.Row="2" Grid.Column="1"/>
 
-        <Label Text="No of Guest" Grid.Row="3"/>
+        <Button Clicked="GuestAmountButtonClicked" Text="No of Guest" Grid.Row="3"/>
         <Entry x:Name="guests" Placeholder="Number of Guests" Grid.Row="3" Grid.Column="1"/>
 
         <Label Text="Total Bill:" Grid.Row="4"/>
